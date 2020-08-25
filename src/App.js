@@ -16,7 +16,7 @@ import Home from './pages/Home';
 import Navigation from './components/Navigation';
 import Roadmap from './pages/Roadmap/Roadmap';
 
-// import { beApiUrl, cvApiUrl } from './environment';
+// import { beApiUrl, roadmapApiUrl } from './environment';
 
 function App() {
   // useEffect(() => {
@@ -26,7 +26,7 @@ function App() {
   // }, []);
 
   // useEffect(() => {
-  //   fetch(`${cvApiUrl}/getList2`)
+  //   fetch(`${roadmapApiUrl}/getList2`)
   //     .then((res) => res.json())
   //     .then((data) => console.log(data));
   // }, []);
