@@ -22,14 +22,14 @@ const Home = () => {
         initial={{ opacity: 0, y: '100%' }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 1,
+          delay: 2,
           type: 'spring',
           mass: 1,
           stiffness: 200,
           damping: 200,
         }}
       >
-        to success
+        TO SUCCESS
       </motion.h2>
     </div>
   );

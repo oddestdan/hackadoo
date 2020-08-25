@@ -1,31 +1,29 @@
 import React, { Fragment } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import { signIn, signOut } from '../Auth';
 
 import './Navigation.css';
 
-export default ({ user }) => (
-  <div className="Navigation">
-    <Link className="btn btn-primary" to="/">
-      To-Do List
-    </Link>
-    <Link className="btn btn-secondary" to="/new-item">
-      + Add New
-    </Link>
-    {!user && <Button onClick={signIn}>Login</Button>}
-    {user && (
-      <Fragment>
-        <Button onClick={signOut}>Logout</Button>
-        <span className="Navigation-profile">
-          <img
-            className="Navigation-profile_picture"
-            src={user.profile.picture}
-            alt="profile"
-          />
-          {user.profile.email}
-        </span>
-      </Fragment>
-    )}
-  </div>
-);
+export default () => {
+  const guestLinks = (
+    <>
+      <motion.li whileHover={{ scale: 1.2 }}>
+        <Link to="/login">SIGN IN</Link>
+      </motion.li>
+
+      <motion.li whileHover={{ scale: 1.2 }}>
+        <Link to="/register">SIGN UP</Link>
+      </motion.li>
+    </>
+  );
+  return (
+    <nav>
+      <Link to="/">
+        <div class="logo" whileHover={{ scale: 1.1 }}>
+          DevRoad
+        </div>
+      </Link>
+      <ul>{guestLinks}</ul>
+    </nav>
+  );
+};

@@ -11,10 +11,14 @@ import ToDoListContainer from './containers/ToDoListContainer';
 import Callback from './containers/Callback';
 import NavigationContainer from './containers/NavigationContainer';
 import Home from './pages/Home';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <Home />
+    <>
+      <Navigation />
+      <Home />
+    </>
     // <Container>
     //   <Row className="row">
     //     <Col xs={12}>
