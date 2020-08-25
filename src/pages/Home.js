@@ -6,14 +6,14 @@ const Home = () => {
   return (
     <div className="container">
       <motion.h1
-        initial={{ x: -5000 }}
+        initial={{ x: -3000 }}
         animate={{ x: 0 }}
         transition={{
           delay: 0.3,
           type: 'spring',
           mass: 1,
-          stiffness: 200,
-          damping: 200,
+          stiffness: 100,
+          damping: 100,
         }}
       >
         THE ROAD
@@ -25,8 +25,8 @@ const Home = () => {
           delay: 2,
           type: 'spring',
           mass: 1,
-          stiffness: 200,
-          damping: 200,
+          stiffness: 100,
+          damping: 100,
         }}
       >
         TO SUCCESS
