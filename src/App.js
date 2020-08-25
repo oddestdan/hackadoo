@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Container from 'react-bootstrap/Container';
@@ -12,6 +12,7 @@ import Callback from './containers/Callback';
 import NavigationContainer from './containers/NavigationContainer';
 import Home from './pages/Home';
 import Navigation from './components/Navigation';
+import Roadmap from './pages/Roadmap/Roadmap';
 
 import { beApiUrl, cvApiUrl } from './environment';
 
@@ -31,7 +32,14 @@ function App() {
   return (
     <>
       <Navigation />
-      <Home />
+      <Switch>
+        <Route exact path="/roadmap">
+          <Roadmap />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
     </>
     // <Container>
     //   <Row className="row">

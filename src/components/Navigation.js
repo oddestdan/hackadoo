@@ -14,6 +14,10 @@ export default () => {
       <motion.li whileHover={{ scale: 1.2 }}>
         <Link to="/register">SIGN UP</Link>
       </motion.li>
+
+      <motion.li whileHover={{ scale: 1.2 }}>
+        <Link to="/roadmap">ROADMAP</Link>
+      </motion.li>
     </>
   );
   return (
