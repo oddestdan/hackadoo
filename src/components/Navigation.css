@@ -37,12 +37,17 @@ ul {
   margin-bottom: 0;
 }
 
-a {
+p {
+  cursor: pointer;
   padding: 0.45rem;
   margin: 0 0.25rem;
   color: whitesmoke;
 }
 
-a:hover {
+p:hover {
   color: whitesmoke;
+}
+
+#secondary-btn {
+  margin-left: 10px;
 }

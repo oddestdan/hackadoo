@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <Navigation />
-      <Home />
+      <Route exact path="/" component={Home} />
     </>
     // <Container>
     //   <Row className="row">
