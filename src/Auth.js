@@ -19,6 +19,8 @@ export function handleAuthentication() {
       }
       const idToken = authResult.idToken;
       const profile = authResult.idTokenPayload;
+      console.log(profile);
+      loginToMongo(profile);
       // set the time that the id token will expire at
       const expiresAt = authResult.idTokenPayload.exp * 1000;
       resolve({
@@ -30,6 +32,24 @@ export function handleAuthentication() {
     });
   });
 }
+
+const fetch = window.fetch.bind(window);
+
+const loginToMongo = async (payload) => {
+  try {
+    const response = await fetch('http://localhost:5000/api/auth/google', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ payload: payload }),
+    });
+    const data = await response.json();
+    console.log(data);
+  } catch (e) {
+    console.log(e.message);
+  }
+};
 
 export function signIn() {
   auth0Client.authorize();
