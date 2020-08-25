@@ -10,6 +10,7 @@ import AddToDo from './containers/AddToDo';
 import ToDoListContainer from './containers/ToDoListContainer';
 import Callback from './containers/Callback';
 import NavigationContainer from './containers/NavigationContainer';
+import Survey from './components/Survey/Survey';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/" component={ToDoListContainer} />
           <Route exact path="/new-item" component={AddToDo} />
           <Route exact path="/callback" component={Callback} />
+          <Route exact path="/survey" component={Survey} />
         </Col>
       </Row>
     </Container>

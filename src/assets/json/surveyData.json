@@ -1,0 +1,90 @@
+[
+  {
+    "category": "Internet",
+    "skills": [
+      "How does the internet work?",
+      "What is HTTP?",
+      "Browsers and how they work?",
+      "DNS and how it works?",
+      "What is Domain Name?",
+      "What is hosting?"
+    ]
+  },
+  {
+    "category": "HTML",
+    "skills": [
+      {
+        "skillName": "Basics"
+      },
+      {
+        "skillName": "Semantic HTML"
+      },
+      {
+        "skillName": "Forms and Validations"
+      },
+      {
+        "skillName": "Conventions and Best Practices"
+      },
+      {
+        "skillName": "Accessibility"
+      },
+      {
+        "skillName": "SEO Basics"
+      }
+    ]
+  },
+  {
+    "category": "CSS",
+    "skills": [
+      {
+        "skillName": "Basics"
+      },
+      {
+        "skillName": "Making Layouts",
+        "technologies": [
+          "Floats",
+          "Positioning",
+          "Display",
+          "Box Model",
+          "CSS Grid",
+          "Flex Box"
+        ]
+      },
+      {
+        "skillName": "Responsive design and Media Queries"
+      }
+    ]
+  },
+  {
+    "category": "JavaScript",
+    "skills": [
+      {
+        "skillName": "Syntax and Basics Constructs"
+      },
+      {
+        "skillName": "DOM Manipulation"
+      },
+      {
+        "skillName": "Fetch API / Ajax (XHR)"
+      },
+      {
+        "skillName": "ES6+ and modular JavaScript"
+      },
+      {
+        "skillName": "Concepts Hoisting, Event Bubbling, Scope, Prototype, Shadow DOM, strict"
+      }
+    ]
+  },
+  {
+    "category": "Version Control Systems",
+    "skills": [
+      {
+        "skillName": "Basic Usage of Git"
+      },
+      {
+        "skillName": "Repo hosting services",
+        "technologies": ["GitHub", "GitLab", "Bitbucket"]
+      }
+    ]
+  }
+]
