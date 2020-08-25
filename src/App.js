@@ -10,6 +10,8 @@ import AddToDo from './containers/AddToDo';
 import ToDoListContainer from './containers/ToDoListContainer';
 import Callback from './containers/Callback';
 import NavigationContainer from './containers/NavigationContainer';
+import Survey from './components/Survey/Survey';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
 import Navigation from './components/Navigation';
 
@@ -32,6 +34,7 @@ function App() {
     <>
       <Navigation />
       <Route exact path="/" component={Home} />
+      <Route exact path="/survey" component={Survey} />
     </>
     // <Container>
     //   <Row className="row">
