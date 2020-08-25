@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "auth0-js": "^9.13.4",
     "bootstrap": "^4.5.2",
+    "framer-motion": "^2.6.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.12",
     "prettier": "^2.1.0",
