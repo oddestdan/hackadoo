@@ -12,6 +12,8 @@ import Callback from './containers/Callback';
 import NavigationContainer from './containers/NavigationContainer';
 import Survey from './components/Survey/Survey';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './pages/Home';
+import Navigation from './components/Navigation';
 
 import { beApiUrl, cvApiUrl } from './environment';
 
@@ -29,18 +31,23 @@ function App() {
   }, []);
 
   return (
-    <Container>
-      <Row className="row">
-        <Col xs={12}>
-          <h1>To Do List</h1>
-          <NavigationContainer />
-          <Route exact path="/" component={ToDoListContainer} />
-          <Route exact path="/new-item" component={AddToDo} />
-          <Route exact path="/callback" component={Callback} />
-          <Route exact path="/survey" component={Survey} />
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <Navigation />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/survey" component={Survey} />
+    </>
+    // <Container>
+    //   <Row className="row">
+    //     <Col xs={12}>
+    //       <h1>To Do List</h1>
+    //       <NavigationContainer />
+    //       <Home />
+    //       <Route exact path="/" component={ToDoListContainer} />
+    //       <Route exact path="/new-item" component={AddToDo} />
+    //       <Route exact path="/callback" component={Callback} />
+    //     </Col>
+    //   </Row>
+    // </Container>
   );
 }
 
