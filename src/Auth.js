@@ -20,7 +20,7 @@ export function handleAuthentication() {
       const idToken = authResult.idToken;
       const profile = authResult.idTokenPayload;
       console.log(profile);
-      loginToMongo(profile);
+      loginToMongo(profile).then((r) => console.log(r));
       // set the time that the id token will expire at
       const expiresAt = authResult.idTokenPayload.exp * 1000;
       resolve({
