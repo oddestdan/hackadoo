@@ -6,10 +6,12 @@ import './App.css';
 // import Col from 'react-bootstrap/Col';
 // import Row from 'react-bootstrap/Row';
 
-// import AddToDo from './containers/AddToDo';
-// import ToDoListContainer from './containers/ToDoListContainer';
-// import Callback from './containers/Callback';
-// import NavigationContainer from './containers/NavigationContainer';
+import AddToDo from './containers/AddToDo';
+import ToDoListContainer from './containers/ToDoListContainer';
+import Callback from './containers/Callback';
+import NavigationContainer from './containers/NavigationContainer';
+import Survey from './components/Survey/Survey';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
 import Navigation from './components/Navigation';
 import Roadmap from './pages/Roadmap/Roadmap';
