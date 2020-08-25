@@ -1,38 +1,47 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import styles from './Survey.module.css';
-import questionsData from '../../assets/json/surveyData.json';
+import surveyData from '../../assets/json/surveyData.json';
+import Question from '../Question/Question';
 
 const Survey = () => {
   const [index, setIndex] = useState(0);
 
-  const handleNextQuestion = (selectedIndex, e) => {
-    setIndex(selectedIndex + 1);
+  const handleNextQuestion = () => {
+    setIndex(index + 1);
+    if (index === surveyData.length - 1) {
+      setIndex(0);
+    }
+  };
+
+  const handlePreviosQuestion = () => {
+    if (index > 0) {
+      setIndex(index - 1);
+    }
+
+    if (index === 0) {
+      setIndex(surveyData.length - 1);
+    }
   };
 
   return (
-    <Carousel
-      activeIndex={index}
-      controls={false}
-      indicators={false}
-      interva={null}
-    >
-      <Carousel.Item>
-        <div className={styles.div}>
-          <h2>Slide 1</h2>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className={styles.div}>
-          <h2>Slide 2</h2>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className={styles.div}>
-          <h2>Slide 3</h2>
-        </div>
-      </Carousel.Item>
-    </Carousel>
+    <>
+      <Carousel
+        activeIndex={index}
+        controls={false}
+        indicators={false}
+        interval={null}
+      >
+        {surveyData.map((surveyItem) => (
+          <Carousel.Item key={surveyItem.category}>
+            <Question
+              question={surveyItem}
+              nextQuestion={handleNextQuestion}
+              previousQuestion={handlePreviosQuestion}
+            />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </>
   );
 };
 

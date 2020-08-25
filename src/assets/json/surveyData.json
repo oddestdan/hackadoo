@@ -2,12 +2,24 @@
   {
     "category": "Internet",
     "skills": [
-      "How does the internet work?",
-      "What is HTTP?",
-      "Browsers and how they work?",
-      "DNS and how it works?",
-      "What is Domain Name?",
-      "What is hosting?"
+      {
+        "skillName": "How does the internet work?"
+      },
+      {
+        "skillName": "What is HTTP?"
+      },
+      {
+        "skillName": "Browsers and how they work?"
+      },
+      {
+        "skillName": "DNS and how it works?"
+      },
+      {
+        "skillName": "What is Domain Name?"
+      },
+      {
+        "skillName": "What is hosting?"
+      }
     ]
   },
   {

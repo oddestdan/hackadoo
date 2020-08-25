@@ -11,6 +11,7 @@ import ToDoListContainer from './containers/ToDoListContainer';
 import Callback from './containers/Callback';
 import NavigationContainer from './containers/NavigationContainer';
 import Survey from './components/Survey/Survey';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { beApiUrl, cvApiUrl } from './environment';
 
