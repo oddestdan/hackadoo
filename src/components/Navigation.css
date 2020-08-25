@@ -1,0 +1,14 @@
+.Navigation {
+  margin-bottom: 15px;
+  background-color: lightgray;
+}
+
+.Navigation-profile {
+  margin-left: 15px;
+}
+
+.Navigation-profile_picture {
+  border-radius: 50%;
+  max-width: 30px;
+  margin-right: 5px;
+}
