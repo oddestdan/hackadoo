@@ -1,0 +1,26 @@
+.Roadmap.custom-container {
+  background-color: #242424;
+  /* If we need to overflow by X later on */
+  /* width: fit-content;  */
+}
+
+svg.custom .node circle {
+  fill: #f3f3ff;
+  stroke: #2593b8;
+  stroke-width: 1.5px;
+}
+
+svg.custom .node text {
+  font-size: 1rem;
+  fill: #f4f4f4;
+}
+
+svg.custom .node {
+  cursor: pointer;
+}
+
+svg.custom path.link {
+  fill: none;
+  stroke: #2593b8;
+  stroke-width: 1.5px;
+}
