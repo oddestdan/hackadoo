@@ -11,7 +11,6 @@ import ToDoListContainer from './containers/ToDoListContainer';
 import Callback from './containers/Callback';
 import NavigationContainer from './containers/NavigationContainer';
 import Survey from './components/Survey/Survey';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
 import Navigation from './components/Navigation';
 import Roadmap from './pages/Roadmap/Roadmap';
@@ -37,6 +36,9 @@ function App() {
       <Switch>
         <Route exact path="/roadmap">
           <Roadmap />
+        </Route>
+        <Route exact path="/survey">
+          <Survey />
         </Route>
         <Route exact path="/">
           <Home />
