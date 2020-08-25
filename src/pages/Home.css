@@ -1,0 +1,34 @@
+.container {
+  max-width: 100%;
+  height: 100vh;
+  background-image: url('../assets/road.jpeg');
+  background-size: cover;
+  overflow: hidden;
+}
+
+h1 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-size: 16rem;
+  color: #165c94;
+  margin: auto;
+  font-family: 'Anton', sans-serif;
+  opacity: 0.9;
+  width: 90%;
+  z-index: 15;
+}
+
+h2 {
+  font-size: 7rem;
+  color: whitesmoke;
+  top: 55%;
+  left: 55%;
+  filter: drop-shadow(5px 5px 5px rgba(6, 15, 30, 0.9));
+  position: absolute;
+  margin: auto;
+  font-family: 'Anton', sans-serif;
+  opacity: 0.9;
+  width: 40%;
+  z-index: 15;
+}
