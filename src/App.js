@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
 
@@ -11,7 +11,21 @@ import ToDoListContainer from './containers/ToDoListContainer';
 import Callback from './containers/Callback';
 import NavigationContainer from './containers/NavigationContainer';
 
+import { beApiUrl, cvApiUrl } from './environment';
+
 function App() {
+  useEffect(() => {
+    fetch(`${beApiUrl}/getList`)
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
+
+  useEffect(() => {
+    fetch(`${cvApiUrl}/getList2`)
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
+
   return (
     <Container>
       <Row className="row">
