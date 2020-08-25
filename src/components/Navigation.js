@@ -6,7 +6,6 @@ export default () => (
     <Link className="btn btn-primary" to="/">
       Go Home
     </Link>
-    |
     <Link className="btn btn-secondary" to="/counter">
       Go Counter
     </Link>

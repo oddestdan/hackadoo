@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import store from './app/store';
 import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import toDoApp from './reducers';
 import * as serviceWorker from './serviceWorker';
+
+const store = createStore(toDoApp);
 
 ReactDOM.render(
   <React.StrictMode>
