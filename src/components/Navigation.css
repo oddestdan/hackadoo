@@ -1,11 +1,11 @@
 nav {
   width: 100%;
   height: 10vh;
-  background: black;
+
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 9, 21, 0.5);
+  background: rgba(31, 132, 210, 0.3);
   padding: 0.7rem 5%;
   z-index: 30;
   backdrop-filter: blur(5px);
@@ -33,8 +33,8 @@ ul {
 }
 
 ul {
-  /* margin-top: 0; */
-  /* margin-bottom: 1rem; */
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 a {

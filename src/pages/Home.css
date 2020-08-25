@@ -1,9 +1,19 @@
 .container {
   max-width: 100%;
   height: 100vh;
-  background-image: url('../assets/road.jpeg');
+  background-image: url('../assets/coding-tube.jpeg');
   background-size: cover;
   overflow: hidden;
+  position: relative;
+}
+.container::after {
+  content: '';
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 9, 21, 0.8);
 }
 
 h1 {
@@ -11,7 +21,7 @@ h1 {
   top: 25%;
   left: 10%;
   font-size: 16rem;
-  color: #165c94;
+  color: #1f84d2;
   margin: auto;
   font-family: 'Anton', sans-serif;
   opacity: 0.9;
