@@ -1,3 +1,51 @@
-.container {
+.paths-container {
   width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/coding-tube.jpeg');
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.paths-container::after {
+  content: '';
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 9, 21, 0.92);
+}
+
+.paths-title {
+  color: whitesmoke;
+  font-size: 3rem;
+  font-family: 'Anton', sans-serif;
+  z-index: 1;
+}
+
+.paths-grid {
+  padding: 20vh 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  z-index: 1;
+}
+
+.path {
+  width: 250px;
+  height: 100px;
+  background: #2593b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.path-title {
+  color: whitesmoke;
 }

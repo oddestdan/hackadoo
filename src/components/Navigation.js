@@ -14,20 +14,22 @@ export default () => {
 
   const guestLinks = (
     <>
-      <motion.li whileHover={{ scale: 1.2 }}>
-        <p onClick={handleShow}>SIGN IN</p>
+      <motion.li className="list-item" whileHover={{ scale: 1.2 }}>
+        <p className="modal-link" onClick={handleShow}>
+          SIGN IN
+        </p>
       </motion.li>
     </>
   );
   return (
     <>
-      <nav>
+      <nav className="nav">
         <Link to="/">
           <div className="logo" whileHover={{ scale: 1.1 }}>
             DevRoad
           </div>
         </Link>
-        <ul>{guestLinks}</ul>
+        <ul className="list">{guestLinks}</ul>
       </nav>
       <Modal size="sm" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
