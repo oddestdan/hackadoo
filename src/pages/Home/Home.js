@@ -6,10 +6,10 @@ import { AuthContext } from '../../authContext/AuthContext';
 
 const Home = () => {
   const history = useHistory();
-  const { isAuthenticated, getUser, user } = useContext(AuthContext);
+  const { isAuthenticated, user, getUser } = useContext(AuthContext);
 
   useEffect(() => {
-    getUser();
+    localStorage.token && getUser();
     isAuthenticated && history.push('/cabinet');
     console.log(user);
   }, [user]);

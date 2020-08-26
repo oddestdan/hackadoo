@@ -12,7 +12,6 @@ import {
   USER_LOADED,
 } from './AuthTypes';
 import setToken from '../utils/setToken';
-import { beApiUrl } from '../environment';
 
 export const AuthContext = createContext({});
 
