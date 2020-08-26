@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import './Home.css';
+import { useHistory } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { AuthContext } from '../../authContext/AuthContext';
 
 const Home = () => {
+  const history = useHistory();
+  const { isAuthenticated, user, getUser } = useContext(AuthContext);
+
+  useEffect(() => {
+    localStorage.token && getUser();
+    isAuthenticated && history.push('/cabinet');
+    console.log(user);
+  }, [user]);
   return (
     <div className="home-container">
       <motion.h1

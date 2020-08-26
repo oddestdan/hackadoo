@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Cabinet.css';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../authContext/AuthContext';
 
 const paths = [
   { title: 'Front-end', path: 'front' },
@@ -10,9 +11,12 @@ const paths = [
 ];
 
 const Cabinet = ({ savePathToStore }) => {
+  const { user } = useContext(AuthContext);
   return (
     <div className="paths-container">
-      <h2 className="paths-title">Choose your path</h2>
+      <h2 className="paths-title">
+        {user && user.firstName}, choose your path
+      </h2>
       <div className="paths-grid">
         {paths.map((path) => {
           return (
