@@ -1,8 +1,10 @@
 .progressCard {
+  border: 2px solid #f1e53c;
+  border-radius: 1rem;
   width: 40%;
   margin: 2rem;
-  background-color: #f1e53c;
-  color: purple;
+  background-color: transparent;
+  color: #ffff;
 }
 
 .title {

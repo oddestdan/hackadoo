@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './Question.module.css';
 import Form from 'react-bootstrap/Form';
 
