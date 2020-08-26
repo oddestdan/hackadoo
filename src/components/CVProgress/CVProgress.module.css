@@ -1,0 +1,17 @@
+.progressTitle {
+  font-family: 'Alien Encounters Italic';
+  padding-bottom: 10rem;
+  padding-top: 5rem;
+  color: #f1e53c;
+  text-shadow: 3px 2px #777777;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+.progressContainer {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
