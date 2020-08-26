@@ -4,10 +4,10 @@ import CVHeading from '../CVHeading/CVHeading';
 import CVDivider from '../CVDivider/CVDivider';
 import puterUrl from '../../assets/puter.png';
 
-export default function CVIntroSection({ username }) {
+export default function CVIntroSection({ username, path }) {
   return (
     <div className={styles.introSection}>
-      <CVHeading username={username} />
+      <CVHeading username={username} path={path} />
       <div className={styles.description}>
         <span>
           We've gathered your Front-End progress and organized it into a nice CV

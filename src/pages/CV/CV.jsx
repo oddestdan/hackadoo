@@ -4,6 +4,7 @@ import CVIntroSection from '../../components/CVIntroSection/CVIntroSection';
 import CVProgressSection from '../../components/CVProgressSection/CVProgressSection';
 
 const mockedUsername = 'Dan';
+const mockedPath = 'Front-end';
 
 export default function CV() {
   const [username, setUsername] = useState('Alyx');
@@ -11,11 +12,12 @@ export default function CV() {
 
   useEffect(() => {
     setUsername(mockedUsername);
+    setUserdata({ ...userdata, path: mockedPath });
   }, []);
 
   return (
     <>
-      <CVIntroSection username={username} />
+      <CVIntroSection username={username} path={userdata.path} />
       <CVProgressSection progress={userdata} />
     </>
   );
