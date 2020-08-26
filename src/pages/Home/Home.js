@@ -6,12 +6,13 @@ import { AuthContext } from '../../authContext/AuthContext';
 
 const Home = () => {
   const history = useHistory();
-  const { isAuthenticated, getUser } = useContext(AuthContext);
+  const { isAuthenticated, getUser, user } = useContext(AuthContext);
 
   useEffect(() => {
     getUser();
     isAuthenticated && history.push('/cabinet');
-  }, [isAuthenticated]);
+    console.log(user);
+  }, [user]);
   return (
     <div className="home-container">
       <motion.h1

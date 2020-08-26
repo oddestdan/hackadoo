@@ -68,7 +68,11 @@ export const AuthProvider = ({ children }) => {
       },
     };
     try {
-      const res = await axios.post(`${beApiUrl}/login`, registerData, config);
+      const res = await axios.post(
+        `http://localhost:5000/api/auth/login`,
+        registerData,
+        config
+      );
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
       await getUser();
     } catch (e) {
