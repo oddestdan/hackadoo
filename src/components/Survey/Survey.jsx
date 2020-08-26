@@ -4,9 +4,9 @@ import styles from './Survey.module.css';
 
 const Survey = () => {
   return (
-    <Survey className={styles.container}>
+    <div className={styles.container}>
       <Question />
-    </Survey>
+    </div>
   );
 };
 
