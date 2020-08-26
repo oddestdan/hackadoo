@@ -1,7 +1,12 @@
 [
   {
-    "category": "Internet",
-    "skills": [
+    "path": "frontend",
+    "title": "Internet",
+    "id": "1",
+    "resources": [],
+    "nextId": "2",
+    "previousId": null,
+    "childrenSkills": [
       {
         "skillName": "How does the internet work?"
       },
@@ -23,8 +28,13 @@
     ]
   },
   {
-    "category": "HTML",
-    "skills": [
+    "path": "frontend",
+    "title": "HTML",
+    "id": "2",
+    "resources": [],
+    "nextId": "3",
+    "previousId": "1",
+    "childrenSkills": [
       {
         "skillName": "Basics"
       },
@@ -46,8 +56,13 @@
     ]
   },
   {
-    "category": "CSS",
-    "skills": [
+    "path": "frontend",
+    "title": "CSS",
+    "id": "3",
+    "resources": [],
+    "nextId": "4",
+    "previousId": "2",
+    "childrenSkills": [
       {
         "skillName": "Basics"
       },
@@ -68,8 +83,13 @@
     ]
   },
   {
-    "category": "JavaScript",
-    "skills": [
+    "path": "frontend",
+    "title": "JavaScript",
+    "id": "4",
+    "resources": [],
+    "nextId": "5",
+    "previousId": "3",
+    "childrenSkills": [
       {
         "skillName": "Syntax and Basics Constructs"
       },
@@ -88,8 +108,13 @@
     ]
   },
   {
-    "category": "Version Control Systems",
-    "skills": [
+    "path": "frontend",
+    "title": "Version Control Systems",
+    "id": "5",
+    "resources": [],
+    "nextId": null,
+    "previousId": "4",
+    "childrenSkills": [
       {
         "skillName": "Basic Usage of Git"
       },

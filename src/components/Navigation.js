@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Modal, Button, Form } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import { FaGoogle } from 'react-icons/fa';
 import './Navigation.css';
 import { signIn } from '../Auth';
@@ -25,7 +25,7 @@ export default () => {
     <>
       <nav className="nav">
         <Link to="/">
-          <div className="logo" whileHover={{ scale: 1.1 }}>
+          <div className="logo" whilehover={{ scale: 1.1 }}>
             DevRoad
           </div>
         </Link>
