@@ -20,7 +20,7 @@
   position: absolute;
   top: 25%;
   left: 10%;
-  font-size: 16rem;
+  font-size: 10rem;
   color: #1f84d2;
   margin: auto;
   font-family: 'Alien Encounters Italic';
@@ -30,9 +30,9 @@
 }
 
 .subtitle {
-  font-size: 7rem;
+  font-size: 4rem;
   color: whitesmoke;
-  top: 55%;
+  top: 25%;
   left: 55%;
   filter: drop-shadow(5px 5px 5px rgba(6, 15, 30, 0.9));
   position: absolute;
