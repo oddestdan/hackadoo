@@ -17,18 +17,14 @@ function App() {
     <>
       <Navigation />
       <Switch>
-        <PrivateRoute exact path="/cabinet">
-          <Cabinet />
-        </PrivateRoute>
-        <PrivateRoute exact path="/roadmap">
-          <Roadmap />
-        </PrivateRoute>
-        <PrivateRoute exact path="/survey">
-          <Survey />
-        </PrivateRoute>
-        <PrivateRoute exact path="/cv">
-          <CV />
-        </PrivateRoute>
+        <PrivateRoute exact path="/cabinet" component={Cabinet} />
+
+        <PrivateRoute exact path="/roadmap" component={Roadmap} />
+
+        <PrivateRoute exact path="/survey" component={Survey} />
+
+        <PrivateRoute exact path="/cv" component={CV} />
+
         <Route exact path="/">
           <Home />
         </Route>
