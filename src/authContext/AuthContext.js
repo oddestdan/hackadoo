@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
   const getUser = async () => {
     localStorage.token && setToken(localStorage.token);
     try {
-      const res = await axios.get(`${beApiUrl}/user`);
+      const res = await axios.get(`http://localhost:5000/api/auth/user`);
       dispatch({ type: USER_LOADED, payload: res.data });
     } catch (e) {
       dispatch({ type: AUTH_ERROR });
@@ -51,7 +51,6 @@ export const AuthProvider = ({ children }) => {
         registerData,
         config
       );
-      console.log(res);
       dispatch({ type: REGISTER_SUCCESS, payload: res.data });
     } catch (e) {
       dispatch({

@@ -26,7 +26,6 @@ const Navigation = () => {
   } = useInput('');
 
   const { value: email, bind: bindEmail, reset: resetEmail } = useInput('');
-  console.log(isAuthenticated);
   const {
     value: password,
     bind: bindPassword,
