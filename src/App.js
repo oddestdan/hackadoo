@@ -6,32 +6,18 @@ import './App.css';
 // import Col from 'react-bootstrap/Col';
 // import Row from 'react-bootstrap/Row';
 
-import AddToDo from './containers/AddToDo';
-import ToDoListContainer from './containers/ToDoListContainer';
-import Callback from './containers/Callback';
-import NavigationContainer from './containers/NavigationContainer';
+// import AddToDo from './containers/AddToDo';
+// import ToDoListContainer from './containers/ToDoListContainer';
+// import Callback from './containers/Callback';
+// import NavigationContainer from './containers/NavigationContainer';
 import Survey from './components/Survey/Survey';
 import Home from './pages/Home/Home';
 import Navigation from './components/Navigation';
 import Roadmap from './pages/Roadmap/Roadmap';
 import CV from './pages/CV/CV';
-import Cabinet from './pages/Cabinet/Cabinet';
-
-// import { beApiUrl, roadmapApiUrl } from './environment';
+import Cabinet from './containers/CabinetContainer';
 
 function App() {
-  // useEffect(() => {
-  //   fetch(`${beApiUrl}/getList`)
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, []);
-
-  // useEffect(() => {
-  //   fetch(`${roadmapApiUrl}/getList2`)
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, []);
-
   return (
     <>
       <Navigation />
