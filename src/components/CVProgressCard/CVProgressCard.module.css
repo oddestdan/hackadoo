@@ -1,6 +1,41 @@
 .progressCard {
-  width: 300px;
-  height: 250px;
+  width: 40%;
   margin: 2rem;
   background-color: #f1e53c;
+  color: purple;
+}
+
+.title {
+  text-align: center;
+  margin: 10px 0;
+  border-bottom: 1px solid purple;
+}
+
+.list {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.skill-name {
+  display: flex;
+  align-items: center;
+}
+
+.skill-name::before {
+  content: '';
+  display: block;
+  background: url('../../assets/tick.png') no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0 6px 0 0;
+}
+
+.item:nth-of-type(2n) {
+  align-self: flex-end;
 }
