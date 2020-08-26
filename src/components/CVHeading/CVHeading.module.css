@@ -1,0 +1,18 @@
+.headings {
+  text-align: center;
+  font-family: 'Alien Encounters Italic';
+}
+
+.heading {
+  font-size: 8rem;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  text-shadow: 20px 10px #ffffff;
+  color: #ea2e8c;
+}
+
+.subheading {
+  font-size: 3rem;
+  text-transform: uppercase;
+}

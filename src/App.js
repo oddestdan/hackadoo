@@ -11,9 +11,11 @@ import ToDoListContainer from './containers/ToDoListContainer';
 import Callback from './containers/Callback';
 import NavigationContainer from './containers/NavigationContainer';
 import Survey from './components/Survey/Survey';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import Navigation from './components/Navigation';
 import Roadmap from './pages/Roadmap/Roadmap';
+import CV from './pages/CV/CV';
+import Cabinet from './pages/Cabinet/Cabinet';
 
 // import { beApiUrl, roadmapApiUrl } from './environment';
 
@@ -34,11 +36,17 @@ function App() {
     <>
       <Navigation />
       <Switch>
+        <Route exact path="/cabinet">
+          <Cabinet />
+        </Route>
         <Route exact path="/roadmap">
           <Roadmap />
         </Route>
         <Route exact path="/survey">
           <Survey />
+        </Route>
+        <Route exact path="/cv">
+          <CV />
         </Route>
         <Route exact path="/">
           <Home />

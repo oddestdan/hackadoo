@@ -1,0 +1,16 @@
+.footer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+.footerText {
+  font-size: 1rem;
+  color: #ea2e8c;
+  color: #f1e53c;
+  font-family: 'Alien Encounters Italic';
+  /* font-weight: bold; */
+}
