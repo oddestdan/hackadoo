@@ -26,7 +26,7 @@ export default () => {
     <>
       <nav>
         <Link to="/">
-          <div class="logo" whileHover={{ scale: 1.1 }}>
+          <div className="logo" whilehover={{ scale: 1.1 }}>
             DevRoad
           </div>
         </Link>

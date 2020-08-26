@@ -1,38 +1,16 @@
 import React from 'react';
 import styles from './Question.module.css';
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-const Question = ({ question, nextQuestion, previousQuestion }) => (
+const Question = () => (
   <div className={styles.container}>
-    <p className={styles.question}>Do you know - {question.category}?</p>
+    <p className={styles.question}>Do you know - ...?</p>
     <p>Check technologies:</p>
-    <Form className={styles.form}>
-      {question.skills.map((skill) => (
-        <div key={skill.skillName} className={styles['checkbox-container']}>
-          <Form.Check
-            inline
-            label={skill.skillName}
-            type={'checkbox'}
-            id={skill.skillName}
-            className={styles.checkbox}
-          />
-        </div>
-      ))}
-    </Form>
     <div>
-      <Button
-        variant="secondary"
-        onClick={() => previousQuestion()}
-        className={styles.button}
-      >
-        Previos
+      <Button variant="secondary" className={styles.button}>
+        Previous
       </Button>
-      <Button
-        variant="success"
-        onClick={() => nextQuestion()}
-        className={styles.button}
-      >
+      <Button variant="success" className={styles.button}>
         Next
       </Button>
     </div>
@@ -40,3 +18,17 @@ const Question = ({ question, nextQuestion, previousQuestion }) => (
 );
 
 export default Question;
+
+//  {/* <Form className={styles.form}>
+//       {question.skills.map((skill) => (
+//         <div key={skill.skillName} className={styles['checkbox-container']}>
+//           <Form.Check
+//             inline
+//             label={skill.skillName}
+//             type={'checkbox'}
+//             id={skill.skillName}
+//             className={styles.checkbox}
+//           />
+//         </div>
+//       ))}
+// </Form> */}
