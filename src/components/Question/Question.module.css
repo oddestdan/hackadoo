@@ -1,23 +1,24 @@
 .container {
-  height: 500px;
-  background-color: #000;
+  height: 100vh;
   text-align: center;
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  padding: 50px;
-  margin: 150px;
+  background-color: #2d2636;
+  padding: 10vh 50px;
 }
 
 .question {
-  align-self: flex-start;
-  font-size: 48px;
+  align-self: center;
+  font-size: 4rem;
 }
 
 .form {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .form .checkbox {
