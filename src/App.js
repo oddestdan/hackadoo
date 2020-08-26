@@ -15,7 +15,7 @@ import Home from './pages/Home/Home';
 import Navigation from './components/Navigation';
 import Roadmap from './pages/Roadmap/Roadmap';
 import CV from './pages/CV/CV';
-import Cabinet from './pages/Cabinet/Cabinet';
+import Cabinet from './containers/CabinetContainer';
 
 function App() {
   return (
