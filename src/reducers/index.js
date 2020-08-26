@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import authReducer from './authReducer';
 import pathReducer from './pathReducer';
+import progressReducer from './progressReducer';
 
 export default combineReducers({
-  auth: authReducer,
   chosenPath: pathReducer,
+  progress: progressReducer,
 });

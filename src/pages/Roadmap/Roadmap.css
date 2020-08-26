@@ -1,5 +1,6 @@
 .Roadmap.custom-container {
   background-color: #242424;
+  padding: 100px;
   /* If we need to overflow by X later on */
   /* width: fit-content;  */
 }

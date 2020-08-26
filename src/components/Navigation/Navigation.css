@@ -11,12 +11,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Helvetica Light';
 }
 
-.logo {
+.site-title {
   font-size: 2rem;
-  font-family: 'Anton', sans-serif;
-  color: whitesmoke;
+  color: #ea2e8c;
+  text-shadow: 3px 3px #f1e53cd5;
+  font-family: 'Alien Encounters Italic';
 }
 
 .list {
@@ -34,13 +36,16 @@
   cursor: pointer;
   padding: 0.45rem;
   margin: 0 0.25rem;
-  color: whitesmoke;
-}
-
-.modal-link:hover {
-  color: whitesmoke;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 #secondary-btn {
   margin-left: 10px;
+}
+
+.welcome {
+  color: whitesmoke;
+  font-size: 2rem;
+  margin: 0 20px 5px 0;
 }
