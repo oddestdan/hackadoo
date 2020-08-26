@@ -24,7 +24,10 @@ const Cabinet = ({ savePathToStore }) => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 className="path"
-                onClick={() => savePathToStore(path.path)}
+                onClick={() => {
+                  console.log(path.path);
+                  savePathToStore(path.path);
+                }}
               >
                 <h3 className="path-title">{path.title}</h3>
               </motion.button>

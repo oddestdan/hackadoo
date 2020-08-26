@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { FaGoogle } from 'react-icons/fa';
 import './Navigation.css';
-import { useInput } from '../hooks/useInput';
-import { AuthContext } from '../authContext/AuthContext';
+import { useInput } from '../../hooks/useInput';
+import { AuthContext } from '../../authContext/AuthContext';
 
 const Navigation = () => {
   const {
@@ -95,7 +95,7 @@ const Navigation = () => {
     <>
       <nav className="nav">
         <Link to="/">
-          <motion.div className="logo" whileHover={{ scale: 1.1 }}>
+          <motion.div className="site-title" whileHover={{ scale: 1.1 }}>
             DevRoad
           </motion.div>
         </Link>
