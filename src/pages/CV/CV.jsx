@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from './CV.module.css';
+// import styles from './CV.module.css';
 import CVIntroSection from '../../components/CVIntroSection/CVIntroSection';
 import CVProgressSection from '../../components/CVProgressSection/CVProgressSection';
 
