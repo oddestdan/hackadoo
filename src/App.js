@@ -17,21 +17,7 @@ import Roadmap from './pages/Roadmap/Roadmap';
 import CV from './pages/CV/CV';
 import Cabinet from './pages/Cabinet/Cabinet';
 
-// import { beApiUrl, roadmapApiUrl } from './environment';
-
 function App() {
-  // useEffect(() => {
-  //   fetch(`${beApiUrl}/getList`)
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, []);
-
-  // useEffect(() => {
-  //   fetch(`${roadmapApiUrl}/getList2`)
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, []);
-
   return (
     <>
       <Navigation />
