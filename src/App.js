@@ -24,7 +24,7 @@ function App() {
 
         <PrivateRoute exact path="/survey" component={Survey} />
 
-        <PrivateRoute exact path="/cv" component={CV} />
+        <Route exact path="/cv" component={CV} />
 
         <Route exact path="/">
           <Home />

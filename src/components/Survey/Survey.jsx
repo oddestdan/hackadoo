@@ -24,6 +24,14 @@ const Survey = ({ chosenPath, progress, saveProgressToStore }) => {
     fetch(fetchUrl)
       .then((res) => res.json())
       .then((question) => {
+        const modifyQuestion = (question) => {
+          question.areCheckedAll = false;
+          question.childrenSkills.forEach((child) => {
+            child.isChecked = false;
+          });
+        };
+
+        modifyQuestion(question);
         setQuestion(question);
       });
   };
@@ -57,6 +65,21 @@ const Survey = ({ chosenPath, progress, saveProgressToStore }) => {
     }
   };
 
+  const handleUpChange = (e) => {
+    console.log('Hadling up change');
+    if (e.target.checked) {
+      question.childrenSkills.forEach((checkbox) => {
+        if (checkbox._id === e.target.id) {
+          checkbox.isChecked = true;
+        }
+      });
+    }
+
+    question.areCheckedAll = question.childrenSkills.every(
+      (skill) => skill.isChecked
+    );
+  };
+
   const stopSurvey = () => {
     alert('Finishing survey');
     sendProgressToBackend();
@@ -79,7 +102,7 @@ const Survey = ({ chosenPath, progress, saveProgressToStore }) => {
     <div className={styles.container}>
       <Carousel controls={false} indicators={false} interval={null}>
         <Carousel.Item key={question.id}>
-          <Question question={question} />
+          <Question question={question} handleUpChange={handleUpChange} />
         </Carousel.Item>
       </Carousel>
       <Row className={styles.buttonContainer}>
