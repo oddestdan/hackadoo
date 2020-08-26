@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Question.module.css';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 
-const Question = ({ question, nextQuestion, isLastQuestion }) => {
+const Question = ({ question }) => {
   const [checkboxes, setCheckboxes] = useState([]);
-  const [isButtonNext, setIsButtonNext] = useState(false);
   const [areAllChecked, setAreAllChecked] = useState(false);
 
   // Handle Checkboxes state
@@ -26,13 +24,6 @@ const Question = ({ question, nextQuestion, isLastQuestion }) => {
   useEffect(() => {
     setAreAllChecked(checkboxes.every((el) => el.isChecked === true));
   }, [checkboxes]);
-
-  // Handle button value
-  useEffect(() => {
-    setIsButtonNext(areAllChecked && !isLastQuestion);
-  }, [areAllChecked, isLastQuestion]);
-
-  // TODO: if button is !isButtonNext -> need to create logic to send survey data
 
   const handleCheckboxCheck = (e) => {
     if (e.target.checked) {
@@ -65,13 +56,6 @@ const Question = ({ question, nextQuestion, isLastQuestion }) => {
             </div>
           ))}
       </Form>
-      <Button
-        variant={isButtonNext ? 'success' : 'primary'}
-        onClick={nextQuestion}
-        className={styles.button}
-      >
-        {isButtonNext ? 'Next' : 'Finish'}
-      </Button>
     </div>
   );
 };
