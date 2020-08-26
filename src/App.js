@@ -14,6 +14,7 @@ import Survey from './components/Survey/Survey';
 import Home from './pages/Home/Home';
 import Navigation from './components/Navigation';
 import Roadmap from './pages/Roadmap/Roadmap';
+import CV from './pages/CV/CV';
 import Cabinet from './pages/Cabinet/Cabinet';
 
 // import { beApiUrl, roadmapApiUrl } from './environment';
@@ -43,6 +44,9 @@ function App() {
         </Route>
         <Route exact path="/survey">
           <Survey />
+        </Route>
+        <Route exact path="/cv">
+          <CV />
         </Route>
         <Route exact path="/">
           <Home />
