@@ -1,27 +1,32 @@
-import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import React, { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { FaGoogle } from 'react-icons/fa';
 import './Navigation.css';
-import { getUser, register } from '../actions/authActions';
-import { signIn } from '../Auth';
 import { useInput } from '../hooks/useInput';
+import { AuthContext } from '../authContext/AuthContext';
 
-const Navigation = ({ auth }, getUser, register) => {
+const Navigation = () => {
+  const { getUser, register, isAuthenticated, logOut, user } = useContext(
+    AuthContext
+  );
   const [show, setShow] = useState(false);
+
   const {
     value: firstName,
     bind: bindFirstName,
     reset: resetFirstName,
   } = useInput('');
+
   const {
     value: lastName,
     bind: bindLastName,
     reset: resetLastName,
   } = useInput('');
+
   const { value: email, bind: bindEmail, reset: resetEmail } = useInput('');
+  console.log(isAuthenticated);
   const {
     value: password,
     bind: bindPassword,
@@ -33,7 +38,7 @@ const Navigation = ({ auth }, getUser, register) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     register({ firstName, lastName, email, password });
-    console.log(firstName, lastName, email);
+    console.log(isAuthenticated, user);
     getUser();
     resetFirstName();
     resetLastName();
@@ -50,6 +55,18 @@ const Navigation = ({ auth }, getUser, register) => {
       </motion.li>
     </>
   );
+
+  const userLinks = (
+    <>
+      <motion.li className="list-item" whileHover={{ scale: 1.2 }}>
+        <p className="modal-link" onClick={logOut}>
+          SIGN OUT
+        </p>
+      </motion.li>
+    </>
+  );
+
+  const links = isAuthenticated ? userLinks : guestLinks;
   return (
     <>
       <nav className="nav">
@@ -58,7 +75,7 @@ const Navigation = ({ auth }, getUser, register) => {
             DevRoad
           </motion.div>
         </Link>
-        <ul className="list">{guestLinks}</ul>
+        <ul className="list">{links}</ul>
       </nav>
       <Modal
         aria-labelledby="contained-modal-title-vcenter"
@@ -133,8 +150,4 @@ const Navigation = ({ auth }, getUser, register) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  auth: state.auth,
-});
-
-export default connect(mapStateToProps, { register, getUser })(Navigation);
+export default Navigation;
